@@ -81,7 +81,7 @@ async def alive(alive):
     await alive.client.send_file(alive.chat_id, shivam,caption=text, force_document=False)
     await alive.delete()
 if client2:
- @client2.on(events.NewMessage(outgoing=True, pattern='!javes'))
+ @client2.on(events.NewMessage(outgoing=True, pattern='!alive'))
  async def alive(alive):
     text=(""
                     f"**{ALIVE_S_MMSG}**\n\n"                     
@@ -99,7 +99,7 @@ if client2:
     await alive.client.send_file(alive.chat_id, shivam,caption=text, force_document=False)
     await alive.delete()
 if client3:
- @client3.on(events.NewMessage(outgoing=True, pattern='!javes'))
+ @client3.on(events.NewMessage(outgoing=True, pattern='!alive'))
  async def alive(alive):
     text=(""
                     f"**{ALIVE_S_MMSG}**\n\n"                     
@@ -117,10 +117,10 @@ if client3:
     await alive.client.send_file(alive.chat_id, shivam,caption=text, force_document=False)
     await alive.delete()
 
-@javes05(outgoing=True, pattern="^\.alive$")
-@javes05(outgoing=True, pattern="^\!alive$")
+@javes05(outgoing=True, pattern="^\.op$")
+@javes05(outgoing=True, pattern="^\!op$")
 async def alive(alive):
-    text=("Iam On type` !javes `or` !help `for more info....")
+    text=("Iam On type` !alive `or` !help `for more info....")
     await alive.client.send_file(alive.chat_id, shivam,caption=text, force_document=False)
     await alive.delete()
 
@@ -129,7 +129,7 @@ async def alive(alive):
 
 
 @bot.on(rekcah05(pattern=f"sudo$", allow_sudo=True))
-@bot.on(rekcah05(pattern=f"javes$", allow_sudo=True))
+@bot.on(rekcah05(pattern=f"alive$", allow_sudo=True))
 async def alive(alive):
     text=(""
                     f"**{ALIVE_S_MMSG}**\n\n"                     
